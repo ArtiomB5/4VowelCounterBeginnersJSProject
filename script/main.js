@@ -51,8 +51,15 @@ function vowelsCounter(InputWord) {
         }
     )
     
+    vowels = vowels - consonants;
+
     //сообщение пользовател. количества гласных звуков
-    alert('There are ' + (vowels - consonants) + ' vowels!');
+    if (vowels === 1) {
+        alert('There is ' + vowels + ' vowel!');
+    } else {
+        alert('There are ' + vowels + ' vowels!');
+    }
+    
     vowels = 0;
 }
 
@@ -60,5 +67,3 @@ function vowelsCounter(InputWord) {
 function inputClear() {
     document.getElementById('inputField').value = '';
 }
-
-
